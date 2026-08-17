@@ -1,0 +1,37 @@
+{
+  "name": "build-hw",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "dev:app": "npx tsx configs/esbuild.app.dev.ts",
+    "dev:lib": "npx tsx configs/esbuild.lib.dev.ts",
+    "prod:app": "npx tsx configs/esbuild.app.prod.ts",
+    "prod:lib": "npx tsx configs/esbuild.lib.prod.ts",
+    "swc:dev:lib": "npx tsx configs/swc.lib.dev.ts",
+    "swc:prod:lib": "npx tsx configs/swc.lib.prod.ts",
+    "build": "npm run prod:app && npm run prod:lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeedleMan/build-hw.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeedleMan/build-hw/issues"
+  },
+  "homepage": "https://github.com/DeedleMan/build-hw#readme",
+  "description": "",
+  "devDependencies": {
+    "@swc/cli": "0.8.1",
+    "@swc/core": "1.16.0",
+    "@types/node": "26.2.0",
+    "esbuild": "0.28.2",
+    "typescript": "7.0.2"
+  }
+}
